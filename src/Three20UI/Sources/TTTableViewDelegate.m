@@ -222,6 +222,9 @@ static const NSUInteger kFirstTableSection = 0;
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+    if ([_controller respondsToSelector:@selector(scrollViewDidScroll:)])
+        [_controller performSelector:@selector(scrollViewDidScroll:)
+                          withObject:scrollView];
   if (_controller.menuView) {
     [_controller hideMenu:YES];
   }
