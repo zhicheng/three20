@@ -153,4 +153,10 @@
  */
 - (CGRect)rectForBannerView;
 
+/**
+ * update delegate for without data
+ */
+
+- (void)updateTableDelegate;
+
 @end
